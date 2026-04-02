@@ -185,6 +185,20 @@ The systemd service type was mismatched. `fix3.sh` rewrites it as `Type=forking`
 
 ---
 
+### Flood says it cannot read `/home/rtorrent/downloads`
+
+Fix ownership + directory permissions, then restart both services:
+
+```bash
+sudo chown -R rtorrent:rtorrent /home/rtorrent
+sudo chmod 755 /home/rtorrent
+sudo chmod 775 /home/rtorrent/downloads
+sudo chmod 700 /home/rtorrent/.session
+sudo systemctl restart rtorrent flood
+```
+
+---
+
 ### xmlrpc-c warning during compile
 
 ```
