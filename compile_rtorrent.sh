@@ -202,6 +202,9 @@ fi
 info "Creating directories..."
 mkdir -p /home/rtorrent/downloads /home/rtorrent/.session /var/run/rtorrent /var/log/rtorrent
 chown -R rtorrent:rtorrent /home/rtorrent /var/run/rtorrent /var/log/rtorrent
+chmod 755 /home/rtorrent
+chmod 775 /home/rtorrent/downloads
+chmod 700 /home/rtorrent/.session
 log "Directories ready"
 
 # ── 11. Write rTorrent config ─────────────────────────────────
