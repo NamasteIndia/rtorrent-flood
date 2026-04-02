@@ -30,6 +30,10 @@ Compiles the latest rTorrent and libtorrent directly from the official GitHub re
 ```bash
 sudo bash compile_rtorrent.sh
 ```
+or
+```bash
+curl -fsSL https://raw.githubusercontent.com/NamasteIndia/rtorrent-flood/refs/heads/main/compile_rtorrent.sh | sudo bash
+```
 
 On startup the script shows a version picker:
 
